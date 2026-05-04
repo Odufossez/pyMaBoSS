@@ -523,6 +523,12 @@ class TestEvaluator(TestCase):
         print(f"Results : \n{res}\n Expected : \n{expected}")
         assert res.equals(expected)
 
+    def test_mutation_to_string(self):
+        mutation_constraints = ["AKT1","ON"]
+        res = MaBoSSEvaluator.mutation_to_string(mutation_constraint=mutation_constraints)
+        expected = "AKT1 ON"
+        assert res == expected
+
 
     def test_sand_box(self):
         pass
